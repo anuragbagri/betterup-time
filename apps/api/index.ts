@@ -1,6 +1,10 @@
 import express from 'express';
-import v1Routes from './routes/V1';
+import v1Routes from "./routes/V1/index";
 
 const app = express();
-app.post("/api/v1" , v1Routes);
+app.use("api/V1" , v1Routes);
+
+app.listen(process.env.PORT || 3000);
+
+
 
